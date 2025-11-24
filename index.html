@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>TO do list</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+        <div class="floating-shape shape-5"></div>
+        <div class="floating-shape shape-6"></div>
+        <div class="floating-shape shape-7"></div>
+        <div class="floating-shape shape-8"></div>
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="particle particle-6"></div>
+        <div class="particle particle-7"></div>
+        <div class="particle particle-8"></div>
+        <div class="particle particle-9"></div>
+        <div class="particle particle-10"></div>
+    </div>
+    <div class="motivational-quotes">
+        <p class="quote" id="quote">"The only way to do great work is to love what you do."</p>
+    </div>
+    <div class="container">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <div class="sandbox-container">
+            <div class="hourglass">
+                <div class="hourglass-top">
+                    <div class="sand-top"></div>
+                </div>
+                <div class="hourglass-middle">
+                    <div class="sand-stream"></div>
+                    <div class="sand-stream delay-1"></div>
+                    <div class="sand-stream delay-2"></div>
+                </div>
+                <div class="hourglass-bottom">
+                    <div class="sand-bottom"></div>
+                </div>
+            </div>
+        </div>
+        <h1>To-Do List</h1>
+        <div class="task-stats" id="task-stats">
+            <span class="stat-item">
+                <span class="stat-number" id="total-tasks">0</span>
+                <span class="stat-label">Total</span>
+            </span>
+            <span class="stat-divider">|</span>
+            <span class="stat-item">
+                <span class="stat-number" id="completed-tasks">0</span>
+                <span class="stat-label">Done</span>
+            </span>
+            <span class="stat-divider">|</span>
+            <span class="stat-item">
+                <span class="stat-number" id="pending-tasks">0</span>
+                <span class="stat-label">Pending</span>
+            </span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="🔍 Search tasks...">
+        </div>
+        <div class="inputcontainer">
+            <input type="text" id="todo-input" placeholder="What needs to be done?">
+            <select id="priority-select" title="Priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="add-task-btn" title="Add Task (Enter)">
+                <span class="btn-icon">+</span>
+                <span class="btn-text">Add</span>
+            </button>
+        </div>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="empty-state" id="empty-state">
+            <div class="empty-icon">📝</div>
+            <p class="empty-text">No tasks yet. Start adding tasks above!</p>
+        </div>
+        <ul id="todo-list"></ul>
+        <div class="action-buttons" id="action-buttons">
+            <button class="action-btn" id="clear-completed">Clear Completed</button>
+            <button class="action-btn" id="clear-all">Clear All</button>
+        </div>
+    </div>
+    <script src="./list.js"></script>
+</body>
+</html>
